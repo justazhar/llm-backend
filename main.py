@@ -13,6 +13,7 @@ load_dotenv()
 
 # Create the FastAPI app
 app = FastAPI()
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Allow your frontend (adjust ports/URLs as needed)
 app.add_middleware(
